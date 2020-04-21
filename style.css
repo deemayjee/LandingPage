@@ -103,9 +103,29 @@ input:focus, select:focus, button:focus, textarea:focus {
     color: #252525;
     float: left;
     border-right: 1px solid #e5e5e5;
-    padding-top: 15px;
+    padding-top: 18px;
     padding-bottom: 15px;
     padding-right: 20px;
+}
+
+.header-top .topbar-left .topbar-mail i {
+    margin-right: 5px;
+}
+
+.header-top .topbar-left .topbar-phone i {
+    margin-right: 5px;
+}
+
+.header-top .topbar-right .login-panel i {
+    margin-right: 5px;
+}
+
+.header-top .topbar-right.top-social {
+    float: right;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-right: 1px solid #e5e5e5;
 }
 
 .header-top .topbar-left .topbar-phone {
@@ -131,37 +151,13 @@ input:focus, select:focus, button:focus, textarea:focus {
 
 }
 
-
-.header-top .topbar-right .language-selector {
-    float: right;
-    margin-top: 15px;
-    margin-bottom: 13px;
-}
-
-
-.topbar-right .language-selector {
-    max-width: 142px;
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-}
-
-.topbar-right .language-options {
-    max-width: 142px;
-    box-shadow: none!important;
-    outline: none;
-    cursor: pointer;
-    padding: 0 20px;
-}
-
 .header-top .topbar-right .top-social {
     float: right;
     padding-right: 20px;
-    padding-top: 15px;
+    padding-top: 17px;
     padding-bottom: 15px;
     border-right: 1px solid #e5e5e5;
 }
-
 
 .header-top .topbar-right .top-social a {
     color: #252525;
@@ -173,7 +169,7 @@ input:focus, select:focus, button:focus, textarea:focus {
 
 .flex-middle-header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 30px 0;
 }
 
@@ -202,6 +198,16 @@ input:focus, select:focus, button:focus, textarea:focus {
     position: relative;
 }
 
+.search-bar .middle-header-button:before {
+    position: absolute;
+    right: 30;
+    top: 17px;
+    width: 1px;
+    height: 23px;
+    background: #e5e5e5;
+    content: "";
+}
+
 .middle-header-input {
     display: flex;
     align-items: stretch;
@@ -220,7 +226,7 @@ input:focus, select:focus, button:focus, textarea:focus {
     border: none;
     font-size: 16px;
     color: #d1d1d1;
-    padding: 15px;
+    padding: 20px 0px;
 }
 
 .flex-middle-header .search-bar .middle-header-input button {
@@ -248,12 +254,12 @@ input:focus, select:focus, button:focus, textarea:focus {
 .flex-middle-header .cart-right li{
     list-style: none;
     font-size: 19px;
-    margin-left: 35px;
+    margin-left: 10px;
     display: inline-block;
 }
 
 
-.icon_heart_alt, .icon_bag_alt, .ti-instagram {
+.icon_heart_alt, .icon_bag_alt .ti-instagram {
 
     font-family: eleganticons;
     speak: none;
@@ -287,18 +293,20 @@ a {
     font-size: 18px;
     font-weight: 700;
     color: #252525;
+    margin-left: 15;
 }
 
 .nav-item {
 
     background: #252525;
     display: flex;
+    justify-content: space-between;
     width:100%;
 }
 
 .combined-nav {
     display: flex;
-    padding-left: 190px;
+    padding-left: 120px;
 }
 
 .nav-item .left-nav .left-nav-btn {
@@ -745,7 +753,7 @@ a {
 .inner-element {
     padding: 8px 12px;
     position: absolute;
-    bottom: 25%;
+    bottom: 15%;
     left: 5%;
     width: 30%;
 }
@@ -941,14 +949,14 @@ a {
 .big-item-container {
     display: flex;
     justify-content: space-around;
-    padding: 30px 30px;
+    padding: 20px 10px;
 
 }
 
 .item-container {
     display: flex;
     flex-direction: column;
-    margin: 10;
+    margin: 5;
     position: relative;
 }
 
@@ -1006,9 +1014,27 @@ a {
 .quick-view-cont {
     position: absolute;
     align-items: center;
-    top: 200px;
-    padding-left: 35px;
+    top: 250px;
+    padding-left: 24px;
+    width: 100%;
+    opacity: 0;
+    z-index: 1;
 
+}
+
+.item-container:hover .quick-view-cont {
+    position: absolute;
+    align-items: center;
+    top: 200px;
+    padding-left: 24px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    width: 100%;
+    opacity: 1;
+    z-index: 99;
 }
 
 .item-container .icon {
@@ -1016,11 +1042,29 @@ a {
     color: #252525;
     position: absolute;
     right: 21px;
-    top: 10px;
+    top: -30px;
     cursor: pointer;
     -webkit-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s;
+    opacity: 0;
+    z-index: 1;
+}
+
+.item-container:hover .icon {
+    font-size: 20px;
+    color: #252525;
+    position: absolute;
+    right: 21px;
+    top: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    opacity: 1;
+    z-index: 99;
 }
 
 
@@ -1107,6 +1151,7 @@ a {
 
 .instagram-container {
     display: flex;
+    justify-content: space-between;
 }
 
 .img-cont {
@@ -1114,7 +1159,7 @@ a {
     position: relative;
 }
 
-.image-one {
+.instagram-container .image-one {
     height: 350px;
     margin-left: -15px;
     margin-right: -15px;
@@ -1125,13 +1170,299 @@ a {
     background-position: top center;
 }
 
-.instagram-inner-text h5 a{
-    position: absolute;
-    top: 170px;
+.img-cont:hover .instagram-inner-text {
+    position: relative;
+    top: -180px;
+    text-align: center;
+    opacity: 1;
+    z-index: 99;
+
+}
+
+.instagram-container .img-one:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.img-cont .instagram-inner-text {
+    position: relative;
+    top: -180px;
+    text-align: center;
+    opacity: 0;
+    z-index: 1;
     color: #fff;
 }
 
-.instagram-inner-text{
+
+
+.instagram-container .instagram-inner-text i {
+    font-size: 30px;
+}
+
+.instagram-container .instagram-inner-text h5 {
+    padding-top: 17px;
+}
+
+.instagram-container .instagram-inner-text a {
+    color: #fff;
+}
+
+.blog {
+    padding-top: 72px;
+    padding-bottom: 80px;
+}
+
+.blog-title h2{
+    margin-bottom: 20px;
     text-align: center;
-    max-width: 30%;
+    font-weight: 700;
+}
+
+.blog-title hr {
+    width: 7%;
+    border: 2px solid #e7ab3c;
+}
+
+
+.articles-container{
+    margin-bottom: 50px;
+    display: flex;
+    padding: 35px 120px;
+}
+
+.article-one {
+    width: 100%;
+}
+
+.article-one .latest-text {
+    max-width: 85%;
+
+}
+
+.article-one .latest-text a h4 {
+    color: #252525;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 16px; 
+}
+
+.article-one .latest-text {
+    padding-top: 25px;
+}
+
+.article-one .latest-text .tag-list {
+    margin-bottom: 9px;
+}
+
+.article-one .latest-text .tag-list .tag-item {
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+.article-one .latest-text .tag-list .tag-item i {
+    color: #e7ab3c;
+}
+
+.delivery {
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-left: 250px;
+    max-width: 61%;
+    align-items: center;
+}
+
+.benefit-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #ebebeb;
+}
+
+.benefit-container .inner-benefit {
+    padding-top: 25px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-right: 1px solid #f3f4f0;  
+}
+
+
+.inner-benefit {
+    display: flex;
+}
+
+.benefit-icon {
+    padding-right: 15px;
+}
+
+.benefit-container .inner-benefit .benefit-text h6{
+    color: #252525;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.benefit-container .inner-benefit .benefit-text p{
+    margin-bottom: 0;
+    color: #252525;
+    line-height: 20px;  
+}
+
+.top-footer {
+    background-color: #303030;
+}
+
+.logo-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 190px;
+}
+
+.footer {
+    background-color:#191919;
+    padding-top: 75px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 190px;
+}
+
+.footer-left{
+    margin-bottom: 30px;
+}
+
+.footer-left .footer-logo {
+    margin-bottom: 24px;
+}
+
+.footer-left ul li {
+    list-style: none;
+    color: #b2b2b2;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.footer-left ul li a {
+    line-height: 36px;
+    font-size: 16px;
+    color: #b2b2b2;
+}
+
+.footer-left .footer-social {
+    padding-top: 25px;
+}
+
+.footer-left .footer-social a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background: #434445;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-right: 7px;
+    position: relative;
+}
+
+.footer-left .footer-social a:hover:before {
+    opacity: 1;
+  }
+
+  .footer-left .footer-social a:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #e7ab3c;
+    content: "";
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+}
+
+.footer-left h5 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 26px;
+}
+
+.footer-newsletter h5 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.footer-newsletter {
+    color: #b2b2b2;
+    line-height: 26px;
+  }
+
+  .footer-newsletter .subscribe-form {
+    position: relative;
+    margin-bottom: 75px;
+
+  }
+
+  .footer-newsletter .subscribe-form input {
+    color: #b2b2b2;
+    background: #303030;
+    width: 100%;
+    height: 46px;
+    font-size: 16px;
+    border: none;
+    padding-left: 20px;
+  }
+
+  .footer-newsletter .subscribe-form button {
+    display: inline-block;
+    color: #fff;
+    background: #e7ab3c;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid #e7ab3c;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 13px 20px 12px;
+    cursor: pointer;
+  }
+  
+  .copyright-container{
+    border-top: 1px solid #303030;
+    padding: 15px 0;
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 190px;
+  }
+
+  .copyright-section .copyright-text {
+    font-size: 16px;
+    color: #b2b2b2;
+}
+
+.copyright-section .copyright-text i {
+    color: #cc2424;
+}
+
+
+.fa-facebook, .fa-instagram, .fa-twitter, .fa-pinterest {
+    padding: 12px;
 }
