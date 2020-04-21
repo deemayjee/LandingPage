@@ -745,15 +745,49 @@ a {
 
 
 .slider-cont {
-
     position: relative;
+    padding: 0;
+    margin: 0;
+}
 
+.slider-cont .slide-nav button[type=button] {
+    font-size: 30px;
+    left: 40px;
+    top: 45%;
+    color: #252525;
+    background: 0 0;
+    border: none;
+}
+
+.slide-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    top: -250px;
+}
+
+.slider-1 {
+    opacity: 1;
+    z-index: 99;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.slider-2 {
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
 }
 
 .inner-element {
     padding: 8px 12px;
     position: absolute;
-    bottom: 15%;
+    bottom: 22%;
     left: 5%;
     width: 30%;
 }
@@ -1466,3 +1500,6 @@ a {
 .fa-facebook, .fa-instagram, .fa-twitter, .fa-pinterest {
     padding: 12px;
 }
+
+
+
